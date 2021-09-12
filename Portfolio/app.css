@@ -36,6 +36,9 @@ body{
     color: rgb(223,224,230);
     font-size: 1rem;
 }
+
+
+
 nav{
     position:fixed;
     width: 100%;
@@ -69,6 +72,9 @@ nav a{
     color: inherit;
 }
 
+
+
+
 main{
     padding-top: 1.5em;
 }
@@ -88,6 +94,8 @@ header h1{
 header li{
     margin: 0rem 2em;
 }
+
+
 section{
     display: flex;
     }
@@ -124,6 +132,10 @@ h3{
     body{
         font-size: 1.5em;
     }
+    header{
+        background-position: bottom 30% left;
+    }
+
 }
 ul, li{
     list-style: none;
