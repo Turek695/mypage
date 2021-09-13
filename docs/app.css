@@ -170,16 +170,19 @@ p{
     margin: -1vh;
     border: 2vh solid rgba(223,224,230,0);
     border-radius: 3px;
-    width:500px;
+    /* width:500px; */
+    height:500px;
     flex: 1 1 500px;
     filter:grayscale(0.7);
     box-sizing: border-box;
     position: relative;
     transition: all 0.9s ease-in-out;
+    object-fit:cover;
 }
 #gallery img:hover{
     filter:none;
     border:none;
+    height:none;
     /* width:600px; */
     
 }
