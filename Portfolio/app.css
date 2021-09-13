@@ -37,7 +37,7 @@ body{
     font-size: 1rem;
 }
 
-
+/* nav */
 
 nav{
     position:fixed;
@@ -110,6 +110,14 @@ article{
     max-width: 80%;
     margin: 2em auto;
 }
+/* for h2 not covered by nav */
+article::before{
+    display: block; 
+  content: " "; 
+  margin-top: -2.5em; 
+  height: 2.5em; 
+  visibility: hidden; 
+}
 .quotation{
     font-style: italic;
     font-weight: lighter;
@@ -149,25 +157,25 @@ p{
 
 /* gallery */
 #gallery div{
-    max-width: 80%;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items:baseline;
+    align-items:center;
     align-content:stretch;
     /* max-height: 100vh; */
 }
 #gallery img{
-    margin: 3px;
-    border: 1vh solid rgb(223,224,230);
+    margin: -1vh;
+    border: 2vh solid rgba(223,224,230,0);
     border-radius: 3px;
-    width:400px;
-    flex: 1 1 400px;
+    width:500px;
+    flex: 1 1 500px;
     filter:grayscale(0.7);
     box-sizing: border-box;
     position: relative;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.9s ease-in-out;
 }
 #gallery img:hover{
     filter:none;
