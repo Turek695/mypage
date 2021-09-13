@@ -37,9 +37,7 @@ body{
     font-size: 1rem;
 }
 
-img{
-    visibility: hidden;
-}
+
 
 nav{
     position:fixed;
@@ -49,6 +47,7 @@ nav{
     display:flex;
     font-size: 1em;
     border-bottom: 1px solid rgb(223,224,230);
+    z-index: 1;
 }
 nav .left {
     flex: 1 2 100px;
@@ -68,6 +67,8 @@ nav ul{
 nav li{
     display: inline;
     text-transform:capitalize;
+    transition: all 0.4s ease-in-out;
+
 }
 a{
     text-decoration: none;
@@ -88,6 +89,9 @@ header {
     background-image: url(pics/300m5.jpg);
     background-size: cover;
 }
+header img{
+    visibility: hidden;
+}
 header h1{
     margin: 0rem 1em;
     font-size: 2em;
@@ -98,13 +102,17 @@ header li{
     margin: 0rem 2em;
 }
 
-
+/* section */
 section{
     display: flex;
     }
 article{
     max-width: 80%;
     margin: 2em auto;
+}
+.quotation{
+    font-style: italic;
+    font-weight: lighter;
 }
 section.left{
     flex: 1 2 100px;
@@ -132,20 +140,48 @@ h3{
     margin: 2vh;
     font-size: 1.5em;
 }
-@media (min-width: 748px){
-    body{
-        font-size: 1.5em;
-    }
-    header{
-        background-position: bottom 30% left;
-    }
-
-}
 ul, li{
     list-style: none;
 }
+p{
+    margin-top: 1em;
+}
+
+/* gallery */
+#gallery div{
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:baseline;
+    align-content:stretch;
+    /* max-height: 100vh; */
+}
+#gallery img{
+    margin: 3px;
+    border: 1vh solid rgb(223,224,230);
+    border-radius: 3px;
+    width:400px;
+    flex: 1 1 400px;
+    filter:grayscale(0.7);
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+#gallery img:hover{
+    filter:none;
+    border:none;
+    /* width:600px; */
+    
+}
+
+
+
+/* contact */
 #contact a{
     font-weight: bold;
+    transition: all 0.4s ease-in-out;
 }
 #contact a:hover{
     border-bottom: 1px solid rgb(223,224,230)
@@ -158,8 +194,14 @@ footer{
     font-size: 0.8em;
     word-wrap: normal;
     /* margin: auto; */
+
 }
-.quotation{
-    font-style: italic;
-    font-weight: lighter;
+@media (min-width: 748px){
+    body{
+        font-size: 1.5em;
+    }
+    header{
+        background-position: bottom 30% left;
+    }
+
 }
