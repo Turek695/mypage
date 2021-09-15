@@ -47,7 +47,7 @@ nav{
     display:flex;
     font-size: 1em;
     border-bottom: 1px solid rgb(223,224,230);
-    z-index: 1;
+    z-index: 2;
 }
 nav .left {
     flex: 1 2 100px;
@@ -145,7 +145,7 @@ h2{
     text-transform: capitalize;
 }
 h3{
-    margin: 2vh;
+    margin: 3vh;
     font-size: 1.5em;
 }
 ul, li{
@@ -167,34 +167,36 @@ p{
     /* max-height: 100vh; */
 }
 #gallery img{
-    margin: -1vh;
-    border: 2vh solid rgba(223,224,230,0);
-    border-radius: 3px;
+    margin: 1vh;
+    /* border: 2vh solid rgba(223,224,230,0); */
+    /* border-radius: 3px; */
     max-width: 100%;
-    height:500px;
-    flex: 1 1 500px;
+    height: 100%;
+    width: 500px;
+    flex: 1 1 400px;
     filter:grayscale(0.7);
     box-sizing: border-box;
-    position: relative;
-    transition: all 0.9s ease-in-out;
-    object-fit:cover;
+    /* position: relative; */
+    transition: filter 0.2s ease-in-out;
+    object-fit:scale-down;
 }
 #gallery img:hover{
     filter:none;
-    border:none;
-    height:none;
+    /* border:none;
+    height:none; */
+    transform: scale(1.6);
+    object-fit: scale-down;
+    z-index: 1;
     /* width:600px; */
     
 }
 
-
-
-/* contact */
-#contact a{
+section a{
     font-weight: bold;
     transition: all 0.4s ease-in-out;
+    margin-top: 2em;
 }
-#contact a:hover{
+section a:hover{
     border-bottom: 1px solid rgb(223,224,230)
 }
 footer{
@@ -214,6 +216,10 @@ footer{
     }
     header{
         background-position: bottom 30% left;
+    }
+    #gallery img{
+        object-fit:cover;
+        height: 500px;
     }
 
 }
