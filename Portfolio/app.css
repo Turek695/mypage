@@ -177,7 +177,7 @@ p{
     filter:grayscale(0.7);
     box-sizing: border-box;
     /* position: relative; */
-    transition: filter 0.2s ease-in-out;
+    transition: filter, object-fit 0.2s ease-in-out;
     object-fit:scale-down;
 }
 #gallery img:hover{
@@ -194,7 +194,7 @@ p{
 section a{
     font-weight: bold;
     transition: all 0.4s ease-in-out;
-    margin-top: 2em;
+    /* padding-top: 2em; */
 }
 section a:hover{
     border-bottom: 1px solid rgb(223,224,230)
