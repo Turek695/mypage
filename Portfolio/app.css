@@ -172,7 +172,7 @@ footer {
     font-size: 0.8em;
     word-wrap: normal;
 }
-@media (min-width: 748px) {
+@media screen and (min-width: 748px) {
     body {
         font-size: 1.5em;
     }
@@ -183,13 +183,16 @@ footer {
         object-fit:cover;
         height: 400px;
     }
+   
+}
+@media screen and (min-width: 748px) and (prefers-reduced-motion: no-preference) {
     .gallery img:hover {
         transform: scale(1.6);
        object-fit: scale-down;
        z-index: 1;
     }
 }
-@media (prefers-color-scheme: light) {
+@media print, screen and (prefers-color-scheme: light) {
     body {
         background-color: rgb(223,224,230);
         color: rgb(16,33,55);
@@ -199,7 +202,16 @@ footer {
         color: rgb(223,224,230);
     }
 }
-@media (prefers-color-scheme: dark) {
+@media print {
+    nav {
+        visibility: hidden;
+    }
+    footer {
+        background-color: rgb(223,224,230);
+        color: rgb(16,33,55);
+    }
+}
+@media screen and (prefers-color-scheme: dark) {
     body {
         background-color: rgb(16,33,55);
         color: rgb(223,224,230);
