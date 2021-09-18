@@ -16,30 +16,28 @@
 
 <body>
     <nav>
-        <!-- divs for good shrink -->
-        <div class="left"></div>
-        <!-- improve elements shrink to h2 and p like -->
-        <ul>
+        <div class="leftBar"></div>
+        <ul class="content">
             <li><a href="#about">About Me</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="right"></div>
+        <div class="rightBar"></div>
     </nav>
     <main>
         <header>
-            <H1>Łukasz Turowski</H1>
+            <h1>Łukasz Turowski</h1>
             <ul>
                 <li>Automation Engineer</li>
                 <li>Beginner Web Developer</li>
             </ul>
             <img src="" alt="Me in front of my car on the road between the crop fields">
         </header>
-        <Section>
-            <div class="left"></div>
-            <div class="middle">
-                <article id="about">
+        <section class="section">
+            <div class="leftBar"></div>
+            <div class="content">
+                <article calss="text" id="about">
                     <h2>about me</h2>
                     <p>I am driven by the curiosity of the world and I am constantly broadening my horizons. Optimism
                         and a sense of humor helps to relieve tension in difficult situations. The pressure of time
@@ -48,8 +46,8 @@
                         colleague that I hear in my head during everyday activities at work.
                     </p>
                 </article>
-                <article id="experience">
-                    <H2>experience</H2>
+                <article calss="text" id="experience">
+                    <h2>experience</h2>
                     <h3>Web dev</h3>
                     <p>This is my very firts web page. For now, I work to make it look and work decent. I am in the
                         process of studying Web Dev Bootcamp.
@@ -67,44 +65,33 @@
                         <li>I plan maintenance work to prevent machinery breakdown.</li>
                         <li>I keep in touch with suppliers of machines and spare parts.</li>
                         <li>I train and suport on-site technicians.</li>
-
-                        <p> My career started in 2008 when I was doing an apprenticeship in a technical school in the
-                            maintenance department. I decided to do my best to take up such a job in the future. I
-                            studied automation and robotics and worked as an electrical installer in factories and
-                            construction sites ...
-                        </p>
                     </ul>
-                    <p></p>
+                    <p> My career started in 2008 when I was doing an apprenticeship in a technical school in the
+                        maintenance department. I decided to do my best to take up such a job in the future. I
+                        studied automation and robotics and worked as an electrical installer in factories and
+                        construction sites ...
+                    </p>
                 </article>
-                <article id="gallery">
-                    <h2>gallery of my interests </h2>
+                <article class="gallery" id="gallery">
+                    <h2>gallery of my interests</h2>
                     <div>
-
                         <img alt:"green plant on gray pot"
                             src="https://images.unsplash.com/photo-1526397751294-331021109fbd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80">
                         <img alt"white tree branch on black pot"
                             src="https://images.unsplash.com/photo-1599598177777-21fece775e88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80">
-
-                        <!-- Liściaste -->
-                        <img alt:"plant"
-                            src="https://images.unsplash.com/photo-1536727510301-a2e7a31bb6cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
-                        <img alt:"plant"
-                            src="https://images.unsplash.com/photo-1624162872504-e57ceca8874f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80">
-
-                        <img alt:"plant"
-                            src="https://images.unsplash.com/photo-1569873175476-10aa45523ab8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=659&q=80">
-                        <img alt:"plant"
-                            src="https://images.unsplash.com/photo-1559657153-fdea6cd5ddf7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
-                        <img alt:"plant"
-                            src="https://images.unsplash.com/photo-1559133171-df1ff588e59f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80">
-
-                        <!-- Ciekawe -->
+                        <img alt:"my car - Chrysler 300m" src="pics/IMG_8140.jpg">
+                        <img alt:"my plant - ficus" src="pics/210130837_10226758443295454_7314679061495297539_n.jpg">
+                        <img alt:"Sniezka - highest peack of Sudety Moutains"
+                            src="https://images.unsplash.com/photo-1553209306-8bd6dc4363fb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80">
+                        <img alt:"PC gaming"
+                            src="https://images.unsplash.com/photo-1610448627157-9a9e91a21ed0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80">
+                        <img alt:"levitating open book in library"
+                            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
                         <img alt:"plant"
                             src="https://images.unsplash.com/photo-1599598425947-5202edd56bdb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80">
-
                     </div>
                 </article>
-                <article id="contact">
+                <article calss="text" id="contact">
                     <h2>contact me</h2>
                     <ul>
                         <li>Email: <a href="mailto:turowski.luk@gmail.com">turowski.luk@gmail.com</a></li>
@@ -113,7 +100,7 @@
                     </ul>
                 </article>
             </div>
-            <div class="right"></div>
+            <div class="rightBar"></div>
         </Section>
     </main>
     <footer>
@@ -122,6 +109,5 @@
         </p>
     </footer>
 </body>
-<!-- add back to top button in low rigth corner -->
 
 </html>
