@@ -189,3 +189,23 @@ footer {
     }
 
 }
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: rgb(223,224,230);
+        color: rgb(16,33,55);
+    }
+    footer {
+        background-color: rgb(16,33,55);
+        color: rgb(223,224,230);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(16,33,55);
+        color: rgb(223,224,230);
+    }
+    footer {
+        background-color: rgb(223,224,230);
+        color: rgb(16,33,55);
+    }
+}
