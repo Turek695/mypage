@@ -18,28 +18,24 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-html{
+html {
     font-family: 'Roboto', sans-serif;
     box-sizing:border-box;
     scroll-behavior: smooth;
 }
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
     display: none;
 }
-body{
+body {
     background-color: rgb(16,33,55);
     color: rgb(223,224,230);
     font-size: 1rem;
 }
-
-/* nav */
-
-nav{
+nav {
     position:fixed;
     width: 100%;
     height:2.5em;
@@ -49,37 +45,26 @@ nav{
     border-bottom: 1px solid rgb(223,224,230);
     z-index: 2;
 }
-nav .left {
-    flex: 1 2 100px;
-    height: inherit;
-}
-nav .right {
-    flex: 0.5 4 300px;
-    height: inherit;
-}
-nav ul{
+nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    flex: 2 1 600px;
+    flex: 3 1 800px;
 }
-nav li{
+nav li {
     display: inline;
     text-transform:capitalize;
     transition: all 0.4s ease-in-out;
-
 }
 a{
     text-decoration: none;
     color: inherit;
 }
-nav li:hover{
+nav li:hover {
     border-bottom: 1px solid rgb(223,224,230);
 }
-
-
-main{
+main {
     padding-top: 2.5em;
 }
 header {
@@ -89,74 +74,65 @@ header {
     background-image: url(pics/300m5.jpg);
     background-size: cover;
 }
-header img{
+header img {
     visibility: hidden;
 }
-header h1{
+header h1 {
     margin: 0rem 1em;
     font-size: 2em;
     font-weight: 900;
 }
-
-header li{
+header li {
     margin: 0rem 2em;
 }
-
-/* section */
-section{
+.section {
     display: flex;
     }
-article{
-    max-width: 80%;
+article {
     margin: 2em auto;
 }
-/* for h2 not covered by nav */
-article::before{
+article::before {
     display: block; 
-  content: " "; 
-  margin-top: -2.5em; 
-  height: 2.5em; 
-  visibility: hidden; 
+    content: " "; 
+    margin-top: -2.5em; 
+    height: 2.5em; 
+    visibility: hidden; 
 }
-.quotation{
+.quotation {
     font-style: italic;
     font-weight: lighter;
 }
-section.left{
+.leftBar {
     flex: 1 2 100px;
     height: inherit;
-
 }
-section.middle{
-    flex: 2 1 600px;
+.content {
+    flex: 2 1 800px;
 }
-section.right{
-    flex: 0.5 4 300px;
+.rightBar {
+    flex: 1 4 100px;
     height: inherit;
-
 }
-article li{
+.text li {
     list-style: initial;
     margin: 0 5vh;
 }
-h2{
+h2 {
     margin: 5vh 0;
     font-size: 2em;
     text-transform: capitalize;
 }
-h3{
+h3 {
     margin: 3vh;
     font-size: 1.5em;
 }
-ul, li{
+ul, li {
     list-style: none;
 }
-p{
+p {
     margin-top: 1em;
 }
-
-/* gallery */
-#gallery div{
+.gallery div {
     max-width: 100%;
     display: flex;
     flex-direction: row;
@@ -164,62 +140,52 @@ p{
     justify-content: center;
     align-items:center;
     align-content:stretch;
-    /* max-height: 100vh; */
 }
-#gallery img{
+.gallery img {
     margin: 1vh;
-    /* border: 2vh solid rgba(223,224,230,0); */
-    /* border-radius: 3px; */
     max-width: 100%;
     height: 100%;
-    width: 500px;
+    max-height: 80vh;
+    width: 400px;
     flex: 1 1 400px;
     filter:grayscale(0.7);
     box-sizing: border-box;
-    /* position: relative; */
     transition: filter, object-fit 0.2s ease-in-out;
     object-fit:scale-down;
 }
-#gallery img:hover{
+.gallery img:hover {
     filter:none;
-    /* border:none;
-    height:none; */
-    transform: scale(1.6);
-    object-fit: scale-down;
-    z-index: 1;
-    /* width:600px; */
-    
 }
-
-section a{
+.gallery img:hover {
+    transform: scale(1.6);
+   object-fit: scale-down;
+   z-index: 1;
+}
+.section a {
     font-weight: bold;
     transition: all 0.4s ease-in-out;
-    /* padding-top: 2em; */
 }
-section a:hover{
+.section a:hover {
     border-bottom: 1px solid rgb(223,224,230)
 }
-footer{
+footer {
     color: rgb(16,33,55);
     background-color:rgb(223,224,230);
     text-align: center;
     height: 5vh;
     font-size: 0.8em;
     word-wrap: normal;
-    /* margin: auto; */
-
 }
-@media (min-width: 748px){
-    /* dodać zmianę zachowania galerii cover>contain */
-    body{
+@media (min-width: 748px) {
+    body {
         font-size: 1.5em;
     }
-    header{
-        background-position: bottom 30% left;
+    header {
+        background-position: top 35% left;
     }
-    #gallery img{
+    .gallery img {
         object-fit:cover;
-        height: 500px;
+        height: 400px;
     }
 
 }
