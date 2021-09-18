@@ -183,7 +183,11 @@ footer {
         object-fit:cover;
         height: 400px;
     }
-
+    .gallery img:hover {
+        transform: scale(1.6);
+       object-fit: scale-down;
+       z-index: 1;
+    }
 }
 @media (prefers-color-scheme: light) {
     body {
@@ -203,12 +207,5 @@ footer {
     footer {
         background-color: rgb(223,224,230);
         color: rgb(16,33,55);
-    }
-}
-@media (hover:hover) {
-    .gallery img:hover {
-        transform: scale(1.6);
-       object-fit: scale-down;
-       z-index: 1;
     }
 }
