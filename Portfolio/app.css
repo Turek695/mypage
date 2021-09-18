@@ -156,11 +156,7 @@ p {
 .gallery img:hover {
     filter:none;
 }
-.gallery img:hover {
-    transform: scale(1.6);
-   object-fit: scale-down;
-   z-index: 1;
-}
+
 .section a {
     font-weight: bold;
     transition: all 0.4s ease-in-out;
@@ -207,5 +203,12 @@ footer {
     footer {
         background-color: rgb(223,224,230);
         color: rgb(16,33,55);
+    }
+}
+@media (hover:hover) {
+    .gallery img:hover {
+        transform: scale(1.6);
+       object-fit: scale-down;
+       z-index: 1;
     }
 }
