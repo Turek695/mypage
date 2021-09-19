@@ -218,4 +218,7 @@ footer {
     header {
         background-position: top left;
     }
+    .content {
+        margin: 0em 1em;
+    }
 }
