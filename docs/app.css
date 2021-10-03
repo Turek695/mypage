@@ -1,223 +1,297 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 html {
-    font-family: 'Roboto', sans-serif;
-    box-sizing:border-box;
-    scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.flex,
+.nav,
+.nav ul,
+.gallery div,
+.section {
+  display: flex;
+}
+.underline,
+.nav,
+.nav li:hover,
+.section a:hover {
+  border-bottom: 1px solid #dfe0e6;
 }
 html::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-body {
-    background-color: rgb(16,33,55);
-    color: rgb(223,224,230);
-    font-size: 1rem;
+.body {
+  background-color: #dfe0e6;
+  color: #102137;
+  font-size: 1rem;
 }
-nav {
-    position:fixed;
-    width: 100%;
-    height:2.5em;
-    background-color: inherit;
-    display:flex;
-    font-size: 1em;
-    border-bottom: 1px solid rgb(223,224,230);
-    z-index: 2;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex: 3 1 800px;
-}
-nav li {
-    display: inline;
-    text-transform:capitalize;
-    transition: all 0.4s ease-in-out;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-nav li:hover {
-    border-bottom: 1px solid rgb(223,224,230);
-}
-main {
-    padding-top: 2.5em;
-}
-header {
-    min-height: calc(100vh - 2.5em);
-    text-align: right;
-    color: rgb(16,33,55);
-    background-image: url(pics/300m5.jpg);
-    background-size: cover;
-}
-header img {
-    visibility: hidden;
-}
-header h1 {
-    margin: 0rem 1em;
-    font-size: 2em;
-    font-weight: 900;
-}
-header li {
-    margin: 0rem 2em;
-}
-.section {
-    display: flex;
-    }
-article {
-    margin: 2em auto;
-}
-article::before {
-    display: block; 
-    content: " "; 
-    margin-top: -2.5em; 
-    height: 2.5em; 
-    visibility: hidden; 
-}
-.quotation {
-    font-style: italic;
-    font-weight: lighter;
-}
-.leftBar {
-    flex: 1 2 100px;
-    height: inherit;
-}
-.content {
-    flex: 2 1 800px;
-}
-.rightBar {
-    flex: 1 4 100px;
-    height: inherit;
-}
-.text li {
-    list-style: initial;
-    margin: 0 5vh;
-}
-h2 {
-    margin: 5vh 0;
-    font-size: 2em;
-    text-transform: capitalize;
-}
-h3 {
-    margin: 3vh;
-    font-size: 1.5em;
-}
-ul, li {
-    list-style: none;
+li {
+  list-style: none;
 }
 p {
-    margin-top: 1em;
+  margin-top: 1em;
+}
+h2 {
+  margin: 5vh 0;
+  font-size: 2em;
+  text-transform: capitalize;
+}
+h3 {
+  margin: 3vh;
+  font-size: 1.5em;
+}
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 2.5em;
+  background-color: inherit;
+  font-size: 1em;
+  z-index: 2;
+}
+.nav ul {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex: 3 1 800px;
+}
+.nav li {
+  display: inline;
+  text-transform: capitalize;
+  transition: all 0.4s ease-in-out;
+}
+.main {
+  padding-top: 2.5em;
+}
+.header {
+  min-height: calc(100vh - 2.5em);
+  text-align: right;
+  color: #102137;
+  background-image: url(pics/300m5.jpg);
+  background-size: cover;
+}
+.header img {
+  visibility: hidden;
+}
+.header h1 {
+  margin: 0rem 1em;
+  font-size: 2em;
+  font-weight: 900;
+}
+.header li {
+  margin: 0rem 2em;
+}
+article {
+  margin: 2em auto;
+}
+article::before {
+  display: block;
+  content: "";
+  margin-top: -2.5em;
+  height: 2.5em;
+  visibility: hidden;
+}
+article li {
+  list-style: none;
+  margin: 0.2em 5vh;
+}
+.quotation {
+  font-style: italic;
+  font-weight: lighter;
+}
+.leftBar {
+  flex: 1 2 100px;
+  height: inherit;
+}
+.content {
+  flex: 2 1 800px;
+}
+.rightBar {
+  flex: 1 4 100px;
+  height: inherit;
 }
 .gallery div {
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items:center;
-    align-content:stretch;
+  max-width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
 }
 .gallery img {
-    margin: 1vh;
-    max-width: 100%;
-    height: 100%;
-    max-height: 80vh;
-    width: 400px;
-    flex: 1 1 400px;
-    filter:grayscale(0.7);
-    box-sizing: border-box;
-    transition: filter, object-fit 0.2s ease-in-out;
-    object-fit:scale-down;
+  margin: 1vh;
+  max-width: 100%;
+  height: 100%;
+  max-height: 80vh;
+  width: 400px;
+  flex: 1 1 400px;
+  filter: grayscale(0.7);
+  box-sizing: border-box;
+  transition: filter, object-fit 0.2s ease-in-out;
+  object-fit: scale-down;
 }
 .gallery img:hover {
-    filter:none;
+  filter: none;
 }
-
 .section a {
-    font-weight: bold;
-    transition: all 0.4s ease-in-out;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
 }
-.section a:hover {
-    border-bottom: 1px solid rgb(223,224,230)
+.footer {
+  color: #102137;
+  background-color: #dfe0e6;
+  text-align: center;
+  height: 5vh;
+  font-size: 0.8em;
+  word-wrap: normal;
 }
-footer {
-    color: rgb(16,33,55);
-    background-color:rgb(223,224,230);
-    text-align: center;
-    height: 5vh;
-    font-size: 0.8em;
-    word-wrap: normal;
+@media (min-width: 748px) {
+  .body {
+    font-size: 1.5em;
+  }
+  .gallery img {
+    object-fit: cover;
+    height: 400px;
+  }
+  .gallery img:hover {
+    transform: scale(1.6);
+    object-fit: scale-down;
+    z-index: 1;
+  }
 }
-@media screen and (min-width: 748px) {
-    body {
-        font-size: 1.5em;
-    }
-    header {
-        background-position: top 35% left;
-    }
-    .gallery img {
-        object-fit:cover;
-        height: 400px;
-    }
-   
+@media (prefers-color-scheme: light) {
+  .body {
+    background-color: #dfe0e6;
+    color: #102137;
+  }
+  .footer {
+    background-color: #102137;
+    color: #dfe0e6;
+  }
 }
-@media screen and (min-width: 748px) and (prefers-reduced-motion: no-preference) {
-    .gallery img:hover {
-        transform: scale(1.6);
-       object-fit: scale-down;
-       z-index: 1;
-    }
+@media (prefers-color-scheme: dark) {
+  .body {
+    background-color: #102137;
+    color: #dfe0e6;
+  }
+  .footer {
+    background-color: #dfe0e6;
+    color: #102137;
+  }
 }
-@media print, screen and (prefers-color-scheme: light) {
-    body {
-        background-color: rgb(223,224,230);
-        color: rgb(16,33,55);
-    }
-    footer {
-        background-color: rgb(16,33,55);
-        color: rgb(223,224,230);
-    }
+@media (orientation: landscape) {
+  .header {
+    background-position: 0% 60%;
+  }
 }
-@media print {
-    nav {
-        visibility: hidden;
-    }
-    footer {
-        background-color: rgb(223,224,230);
-        color: rgb(16,33,55);
-    }
-}
-@media screen and (prefers-color-scheme: dark) {
-    body {
-        background-color: rgb(16,33,55);
-        color: rgb(223,224,230);
-    }
-    footer {
-        background-color: rgb(223,224,230);
-        color: rgb(16,33,55);
-    }
+@media (orientation: portrait) {
+  .header {
+    background-position: top left;
+  }
+  .content {
+    margin: 0em 1em;
+  }
 }
