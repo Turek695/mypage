@@ -271,6 +271,12 @@ article li {
     background-color: #102137;
     color: #dfe0e6;
   }
+  .underline,
+  .nav,
+  .nav li:hover,
+  .section a:hover {
+    border-bottom: 1px solid #102137;
+  }
 }
 @media (prefers-color-scheme: dark) {
   .body {
@@ -280,6 +286,12 @@ article li {
   .footer {
     background-color: #dfe0e6;
     color: #102137;
+  }
+  .underline,
+  .nav,
+  .nav li:hover,
+  .section a:hover {
+    border-bottom: 1px solid #dfe0e6;
   }
 }
 @media (orientation: landscape) {
