@@ -1,12 +1,15 @@
 @import 'reset.less';
+
 html {
     font-family: 'Roboto', sans-serif;
     box-sizing:border-box;
     scroll-behavior: smooth;
 }
+
 .flex {
     display: flex;
 }
+
 .underline {
     border-bottom: 1px solid @color-light;
 }
@@ -14,6 +17,7 @@ html {
 html::-webkit-scrollbar {
     display: none;
 }
+
 @color-light: rgb(223,224,230);
 @color-dark: rgb(16,33,55);
 
@@ -21,33 +25,41 @@ html::-webkit-scrollbar {
     background-color: @color-light;
     color: @color-dark;
 }
+
 .theme(dark) {
     background-color: @color-dark;
     color: @color-light;
 }
+
 .body {
     .theme(light);
     font-size: 1rem;
 }
+
 a{
     text-decoration: none;
     color: inherit;
 }
+
 li {
     list-style: none;
 }
+
 p {
     margin-top: 1em;
 }
+
 h2 {
     margin: 5vh 0;
     font-size: 2em;
     text-transform: capitalize;
 }
+
 h3 {
     margin: 3vh;
     font-size: 1.5em;
 }
+
 .nav {
     position:fixed;
     width: 100%;
@@ -57,6 +69,7 @@ h3 {
     font-size: 1em;
     &:extend(.underline);
     z-index: 2;
+    
     ul {
         &:extend(.flex);
         flex-direction: row;
@@ -64,6 +77,7 @@ h3 {
         align-items: center;
         flex: 3 1 800px;
     }
+
     li {
         display: inline;
         text-transform:capitalize;
@@ -73,29 +87,38 @@ h3 {
         }
     }   
 }
+
 .main {
     padding-top: 2.5em;
 }
+
 .header {
     min-height: calc(100vh - 2.5em);
     text-align: right;
     color: @color-dark;
     background-image: url(pics/300m5.jpg);
     background-size: cover;
-    img {
-        visibility: hidden;
-    }
+    
     h1 {
         margin: 0rem 1em;
         font-size: 2em;
         font-weight: 900;
     }
+
     li {
         margin: 0rem 2em;
     }
 }
-article {
+
+.header__bg-image {
+    visibility: hidden;
+    z-index: -999;
+    position: absolute;
+}
+
+.article {
     margin: 2em auto;
+    
     &::before {
         display: block; 
         content: ""; 
@@ -103,53 +126,58 @@ article {
         height: 2.5em; 
         visibility: hidden; 
     }
+
     li {
         list-style: none;
         margin: 0.2em 5vh;
     }
 }
+
 .quotation {
     font-style: italic;
     font-weight: lighter;
 }
+
 .leftBar {
     flex: 1 2 100px;
     height: inherit;
 }
+
 .content {
     flex: 2 1 800px;
 }
+
 .rightBar {
     flex: 1 4 100px;
     height: inherit;
 }
   
 .gallery { 
-    div {
-        max-width: 100%;
-        &:extend(.flex);
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items:center;
-        align-content:stretch;
-    }
-    img {
-        margin: 1vh;
-        max-width: 100%;
-        height: 100%;
-        max-height: 80vh;
-        width: 400px;
-        flex: 1 1 400px;
-        filter:grayscale(0.7);
-        box-sizing: border-box;
-        transition: filter, object-fit 0.2s ease-in-out;
-        object-fit:scale-down;
-        &:hover {
-            filter:none;
-        }
+    max-width: 100%;
+    &:extend(.flex);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    align-content:stretch;
+}
+
+.gallery__image {
+    margin: 1vh;
+    max-width: 100%;
+    height: 100%;
+    max-height: 80vh;
+    width: 400px;
+    flex: 1 1 400px;
+    filter:grayscale(0.7);
+    box-sizing: border-box;
+    transition: filter, object-fit 0.2s ease-in-out;
+    object-fit:scale-down;
+    &:hover {
+        filter:none;
     }
 }
+
 .section {
     &:extend(.flex);
     a {
@@ -160,6 +188,7 @@ article {
         }
     }
 }
+
 .footer {
     color: @color-dark;
     background-color:@color-light;
@@ -168,10 +197,12 @@ article {
     font-size: 0.8em;
     word-wrap: normal;
 }
+
 @media (min-width: 748px) {
     .body {
         font-size: 1.5em;
     }
+
     .gallery img {
         object-fit:cover;
         height: 400px;
@@ -186,9 +217,11 @@ article {
     .body {
         .theme (light);
     }
+
     .footer {
         .theme (dark);
     }
+
     .underline {
         border-bottom: 1px solid @color-dark;
     }
@@ -197,9 +230,11 @@ article {
     .body {
         .theme (dark);
     }
+
     .footer {
         .theme (light);
     }
+
     .underline {
         border-bottom: 1px solid @color-light;
     }
@@ -213,6 +248,7 @@ article {
     .header {
         background-position: top left;
     }
+
     .content {
         margin: 0em 1em;
     }
