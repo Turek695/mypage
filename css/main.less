@@ -81,7 +81,7 @@ h3 {
     li {
         display: inline;
         text-transform:capitalize;
-        transition: all 0.4s ease-in-out;
+        transition: all .4s ease-in-out;
         &:hover {
             &:extend(.underline);
         }
@@ -111,9 +111,11 @@ h3 {
 }
 
 .header__bg-image {
+    display: none;
     visibility: hidden;
     z-index: -999;
     position: absolute;
+    max-width: 100%;
 }
 
 .article {
@@ -129,7 +131,7 @@ h3 {
 
     li {
         list-style: none;
-        margin: 0.2em 5vh;
+        margin: .2em 5vh;
     }
 }
 
@@ -169,12 +171,11 @@ h3 {
     max-height: 80vh;
     width: 400px;
     flex: 1 1 400px;
-    filter:grayscale(0.7);
+    filter: grayscale(.7);
     box-sizing: border-box;
-    transition: filter, object-fit 0.2s ease-in-out;
-    object-fit:scale-down;
+    transition: filter .2s;
     &:hover {
-        filter:none;
+        filter: none;
     }
 }
 
@@ -182,7 +183,7 @@ h3 {
     &:extend(.flex);
     a {
         font-weight: bold;
-        transition: all 0.4s ease-in-out;
+        transition: all .4s ease-in-out;
         &:hover {
             &:extend(.underline);
         }
@@ -194,7 +195,7 @@ h3 {
     background-color:@color-light;
     text-align: center;
     height: 5vh;
-    font-size: 0.8em;
+    font-size: .8em;
     word-wrap: normal;
 }
 

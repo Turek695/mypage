@@ -182,9 +182,11 @@ h3 {
   margin: 0rem 2em;
 }
 .header__bg-image {
+  display: none;
   visibility: hidden;
   z-index: -999;
   position: absolute;
+  max-width: 100%;
 }
 .article {
   margin: 2em auto;
@@ -232,8 +234,7 @@ h3 {
   flex: 1 1 400px;
   filter: grayscale(0.7);
   box-sizing: border-box;
-  transition: filter, object-fit 0.2s ease-in-out;
-  object-fit: scale-down;
+  transition: filter 0.2s;
 }
 .gallery__image:hover {
   filter: none;
