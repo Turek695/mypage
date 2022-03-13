@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My page - Łukasz Turowski</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"
+        integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
@@ -27,15 +29,14 @@
     </nav>
     <main class="main">
         <header class="header">
-            <h1>Łukasz Turowski</h1>
-            <img class="header__bg-image" src="pics/300m5.jpg"
+            <h1 class="header-h1">Łukasz Turowski</h1>
+            <img class="header__bg-image" src="images/300m5.jpg"
                 alt="Me in front of my car on the road between the crop fields">
-            <ul>
-                <li>Automation Engineer</li>
-                <li>Forever Business Owner</li>
-                <li>Beginner Web Developer</li>
+            <ul class="header-ul">
+                <li class="header-li">Automation Engineer</li>
+                <li class="header-li">Forever Business Owner</li>
+                <li class="header-li">Beginner Web Developer</li>
             </ul>
-
         </header>
         <section class="section">
             <div class="leftBar"></div>
@@ -53,12 +54,14 @@
                 <article class="article" id="experience">
                     <h2>experience</h2>
                     <h3>Web dev</h3>
-                    <p>This is my very firts web page. For now, I work to make it look and work decent. I am in the
-                        process of studying Web Dev Bootcamp.
+                    <p>This is my very firts web page. I'm learing new technologies and creating pages for friends, more
+                        on my github.
                     </p>
                     <p>My portfolio:</p>
                     <ul>
                         <li><a href="https://github.com/Turek695?tab=repositories">My GitHub repositories</a></li>
+                        <li><a href="https://turek695.github.io/MaBel/">Landing page example - under construction</a>
+                        </li>
                         <li><a href="https://turek695.github.io/Brain-Stretcher/">My brain stretching web app </a>- if
                             you get bored, you can try yourself</li>
                     </ul>
@@ -96,14 +99,14 @@
                             src="https://photos.smugmug.com/Aloe-1/Our-Plantations/i-8Htv32s/0/8814e376/XL/SJ_FLP_734_DR_March18_0873-XL.jpg">
                     </div>
                 </article>
-                <article calss="article" id="contact">
+                <address calss="article" id="contact">
                     <h2>contact me</h2>
                     <ul>
                         <li>Email: <a href="mailto:turowski.luk@gmail.com">turowski.luk@gmail.com</a></li>
                         <li>Phone: <a href="tel:+48609651689">+48 609 651 689</a></li>
                         <li><a href="https://www.linkedin.com/in/%C5%82ukasz-turowski-a5b7b4129/">LinkedIn</a></li>
                     </ul>
-                </article>
+                </address>
             </div>
             <div class="rightBar"></div>
         </Section>
@@ -114,7 +117,7 @@
         </p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>
