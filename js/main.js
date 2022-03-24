@@ -4,7 +4,7 @@ $(function () {
     });
 });
 
-const alts = ['', 'Me in Tatry mountains', 'Me in Tatry mountains', 'my car - Chrysler 300m', 'my plant - ficus']
+const alts = ['', 'Me in Tatry mountains', 'Me in Tatry mountains', 'my plant - ficus', 'my car - Chrysler 300m']
 const baseUrl = 'images/';
 const gallery = document.querySelector('.gallery');
 
