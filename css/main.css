@@ -122,6 +122,10 @@ a {
   color: #102137;
   font-size: 1rem;
 }
+.caps,
+.nav li {
+  text-transform: uppercase;
+}
 .content {
   flex: 2 1 800px;
 }
@@ -165,7 +169,6 @@ a {
 h2 {
   margin: 5vh 0;
   font-size: 2em;
-  text-transform: capitalize;
 }
 h3 {
   margin: 3vh;
@@ -183,6 +186,7 @@ h3 {
   font-size: 2em;
   font-weight: 700;
   display: none;
+  padding-top: 1em;
 }
 .header li {
   margin: 0rem 2em;
@@ -200,9 +204,6 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   height: 100%;
-}
-html::-webkit-scrollbar {
-  display: none;
 }
 .leftBar {
   flex: 1 2 100px;
@@ -224,13 +225,12 @@ li {
 }
 .nav ul {
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex: 3 1 800px;
 }
 .nav li {
   display: inline;
-  text-transform: capitalize;
   transition: all 0.4s ease-in-out;
 }
 p {
@@ -261,11 +261,6 @@ p {
   .gallery img {
     object-fit: cover;
     height: 400px;
-  }
-  .gallery img:hover {
-    transform: scale(1.6);
-    object-fit: scale-down;
-    z-index: 1;
   }
 }
 @media (prefers-color-scheme: light) {

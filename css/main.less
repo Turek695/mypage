@@ -30,6 +30,10 @@ a{
     font-size: 1rem;
 }
 
+.caps { 
+    text-transform: uppercase; 
+}
+
 .content {
     flex: 2 1 800px;
 }
@@ -75,7 +79,6 @@ a{
 h2 {
     margin: 5vh 0;
     font-size: 2em;
-    text-transform: capitalize;
 }
 
 h3 {
@@ -95,6 +98,7 @@ h3 {
         font-size: 2em;
         font-weight: 700;
         display: none;
+        padding-top: 1em;
     }
 
     li {
@@ -116,10 +120,6 @@ html {
     box-sizing:border-box;
     scroll-behavior: smooth;
     height: 100%;
-}
-
-html::-webkit-scrollbar {
-    display: none;
 }
 
 .leftBar {
@@ -148,14 +148,14 @@ li {
     ul {
         &:extend(.flex);
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         flex: 3 1 800px;
     }
 
     li {
         display: inline;
-        text-transform:capitalize;
+        &:extend(.caps);
         transition: all .4s ease-in-out;
         &:hover {
             &:extend(.underline);
@@ -206,15 +206,10 @@ p {
     .body {
         font-size: 1.5em;
     }
-
+    
     .gallery img {
         object-fit:cover;
         height: 400px;
-        &:hover {
-            transform: scale(1.6);
-            object-fit: scale-down;
-            z-index: 1;
-        }
     }
 }
 @media (prefers-color-scheme: light) {
