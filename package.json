@@ -1,5 +1,13 @@
 {
   "devDependencies": {
-    "archiver": "^7.0.1"
+    "archiver": "^7.0.1",
+    "@types/bun": "latest"
+  },
+  "name": "mypage",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }
