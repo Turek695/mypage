@@ -76,14 +76,19 @@ a{
     }
 }
 
-h2 {
+.section-title {
     margin: 5vh 0;
     font-size: 2em;
 }
 
-h3 {
+.section-subtitle {
     margin: 3vh;
     font-size: 1.5em;
+}
+
+.section-item {
+    list-style: none;
+    margin: .2em 5vh;
 }
 
 .header {
@@ -93,19 +98,27 @@ h3 {
     background-image: url(../images/300m5.jpg);
     background-size: cover;
     
-    h1 {
+    .header-title {
         margin: 0 1em;
         font-size: 2em;
         font-weight: 700;
-        display: none;
         padding-top: 1em;
+        opacity: 1;
+        transition: opacity 500ms;
     }
 
-    li {
+    .header-role {
         margin: 0rem 2em;
-        display:none
+        opacity: 1;
+        transition: opacity 500ms;
+    }
+
+    .hidden {
+        opacity: 0;
     }
 }
+
+
 
 .header__bg-image {
     display: none;
