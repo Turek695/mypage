@@ -1,7 +1,13 @@
 {
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "devDependencies": {
+    "@types/bun": "latest",
     "archiver": "^7.0.1",
-    "@types/bun": "latest"
+    "vite": "^6.3.3"
   },
   "name": "mypage",
   "module": "index.ts",
