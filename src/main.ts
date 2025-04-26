@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const alts = ['', 'Me in Tatry mountains', 'Me in Tatry mountains', 'my plant - ficus', 'my car - Chrysler 300m']
-const baseUrl = 'src/images/';
+const baseUrl = '/images/';
 const gallery = document.querySelector('.gallery');
 
 for (let i = 1; i <= 4; i++) {
@@ -24,4 +24,3 @@ for (let i = 1; i <= 4; i++) {
     image.classList.add('gallery__image');
     gallery?.appendChild(image);
 }
-
