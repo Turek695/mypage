@@ -1,20 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Łukasz Turowski - Metronome</title>
     <link rel="stylesheet" href="/src/css/metronom.less">
     <style>
-        
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 32px;
+            height: 32px;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+        .theme-toggle svg {
+            width: 100%;
+            height: 100%;
+            fill: currentColor;
+        }
+        .metronome-container {
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" class="moon-icon">
+            <path d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36c-0.98,1.37-2.58,2.26-4.4,2.26 c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/>
+        </svg>
+    </button>
+    
     <div class="metronome-container">
-        <span class="bpm-display">BPM: 120</span>
-        <input type="range" min="1" max="208" value="120" class="bpm-slider">
-        <button class="start-button">Start</button>
+        <h1>Metronome</h1>
+        <div class="bpm-display">120 <span class="bpm-label">BPM</span></div>
+        <input type="range" 
+               min="40" 
+               max="208" 
+               value="120" 
+               class="bpm-slider"
+               aria-label="Adjust BPM">
+        <div class="bpm-range">
+            <span>40</span>
+            <span>208</span>
+        </div>
+        <div class="metronome-controls">
+            <label class="motion-toggle">
+                <input type="checkbox" id="pulseToggle" checked>
+                <span>Pulse animation</span>
+            </label>
+        </div>
+        <button class="start-button" aria-label="Start/Stop metronome">
+            <span class="button-text">Start</span>
+            <svg class="play-icon" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+        </button>
     </div>
+
+    <script type="module" src="/src/theme.ts"></script>
     <script type="module" src="/src/metronom.ts"></script>
 </body>
 </html>
