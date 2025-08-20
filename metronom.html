@@ -44,32 +44,57 @@
         </svg>
     </button>
     
-    <div class="metronome-container">
-        <h1>Metronome</h1>
-        <div class="bpm-display">120 <span class="bpm-label">BPM</span></div>
-        <input type="range" 
-               min="40" 
-               max="208" 
-               value="120" 
-               class="bpm-slider"
-               aria-label="Adjust BPM">
-        <div class="bpm-range">
-            <span>40</span>
-            <span>208</span>
+    <main>
+        <div class="metronome-container">
+            <h1>Metronome</h1>
+            <div class="bpm-display">120 <span class="bpm-label">BPM</span></div>
+            <input type="range" 
+                   min="1" 
+                   max="240" 
+                   value="120" 
+                   class="bpm-slider"
+                   aria-label="Adjust BPM">
+            <div class="bpm-range">
+                <span>1 BPM</span>
+                <span>240 BPM</span>
+            </div>
+            
+            <!-- Interval Time Slider -->
+            <div class="interval-display">
+                <span class="interval-value">500</span>
+            </div>
+            <input type="range" 
+                   min="250" 
+                   max="60000" 
+                   value="500" 
+                   step="10"
+                   class="interval-slider"
+                   aria-label="Adjust interval in milliseconds">
+            <div class="interval-range">
+                <span>250ms</span>
+                <span>60s</span>
+            </div>
+            <div class="metronome-controls">
+                <label class="motion-toggle">
+                    <input type="checkbox" id="pulseToggle" checked>
+                    <span>Pulse animation</span>
+                </label>
+            </div>
+            <button class="start-button" aria-label="Start/Stop metronome">
+                <span class="button-text">Start</span>
+                <svg class="play-icon" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </button>
         </div>
-        <div class="metronome-controls">
-            <label class="motion-toggle">
-                <input type="checkbox" id="pulseToggle" checked>
-                <span>Pulse animation</span>
-            </label>
-        </div>
-        <button class="start-button" aria-label="Start/Stop metronome">
-            <span class="button-text">Start</span>
-            <svg class="play-icon" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-            </svg>
-        </button>
-    </div>
+    </main>
+
+    <footer class="footer">
+        <p>
+            <a href="https://lukaszturowski.xyz">lukaszturowski.xyz</a> | 
+            Copyright &copy; Łukasz Turowski. All Rights Reserved.
+        </p>
+    </footer>
 
     <script type="module" src="/src/theme.ts"></script>
     <script type="module" src="/src/metronom.ts"></script>

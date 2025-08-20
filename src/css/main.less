@@ -44,11 +44,24 @@ a{
 
 .footer {
     color: @color-dark;
-    background-color:@color-light;
+    background-color: @color-light;
     text-align: center;
-    height: 5vh;
-    font-size: .8em;
+    padding: 1.5rem 1rem;
+    font-size: 0.9em;
     word-wrap: normal;
+    margin-top: auto;
+    opacity: 0.8;
+    
+    a {
+        color: var(--primary, #4a6fa5);
+        text-decoration: none;
+        transition: opacity 0.2s;
+        
+        &:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+    }
 }
 
 .gallery { 

@@ -12,10 +12,26 @@ const isPulsingEnabled = (): boolean => {
     return toggle ? toggle.checked : !prefersReducedMotion;
 };
 
+// Convert BPM to milliseconds (ms per beat)
+const bpmToMs = (bpm: number): number => {
+    // Ensure we don't divide by zero and respect minimum interval of 250ms
+    const calculatedMs = 60000 / Math.max(1, bpm);
+    return Math.round(calculatedMs);
+};
+
+// Convert milliseconds to BPM (beats per minute)
+const msToBpm = (ms: number): number => {
+    // Ensure we don't divide by zero and respect maximum BPM of 240
+    const calculatedBpm = 60000 / Math.max(250, ms);
+    return Math.min(240, Math.round(calculatedBpm));
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     // Get metronome elements from HTML
     const bpmInput = document.querySelector('.bpm-slider') as HTMLInputElement;
     const bpmDisplay = document.querySelector('.bpm-display') as HTMLElement;
+    const intervalInput = document.querySelector('.interval-slider') as HTMLInputElement;
+    const intervalDisplay = document.querySelector('.interval-value') as HTMLElement;
     const startButton = document.querySelector('.start-button') as HTMLButtonElement;
     const buttonText = startButton.querySelector('.button-text') as HTMLElement;
     const buttonIcon = startButton.querySelector('svg') as SVGSVGElement;
@@ -32,15 +48,60 @@ document.addEventListener('DOMContentLoaded', () => {
     let isRunning = false;
     let beatCount = 0;
 
+    // Format interval display and update the DOM
+    const updateIntervalDisplayElement = (ms: number) => {
+        const safeMs = Math.max(250, Math.min(60000, ms));
+        const displayElement = intervalDisplay.parentElement as HTMLElement;
+        
+        if (safeMs >= 1000) {
+            intervalDisplay.textContent = (safeMs / 1000).toFixed(1);
+            displayElement.setAttribute('data-format', 'seconds');
+        } else {
+            intervalDisplay.textContent = safeMs.toString();
+            displayElement.removeAttribute('data-format');
+        }
+        return safeMs;
+    };
+
+    // Update BPM and sync interval when BPM slider changes
+    const updateBpmDisplay = (bpm: number) => {
+        const safeBpm = Math.max(1, Math.min(240, bpm));
+        bpmDisplay.innerHTML = `${safeBpm} <span class="bpm-label">BPM</span>`;
+        const ms = bpmToMs(safeBpm);
+        intervalInput.value = ms.toString();
+        updateIntervalDisplayElement(ms);
+    };
+
+    // Update interval display and sync BPM when interval slider changes
+    const updateIntervalDisplay = (ms: number) => {
+        const safeMs = updateIntervalDisplayElement(ms);
+        const bpm = msToBpm(safeMs);
+        bpmInput.value = bpm.toString();
+        bpmDisplay.innerHTML = `${bpm} <span class="bpm-label">BPM</span>`;
+        return safeMs; // Return the safe value for further use
+    };
+
     // Update BPM display when slider changes
     bpmInput.addEventListener('input', (e) => {
         const target = e.target as HTMLInputElement;
         const bpm = parseInt(target.value);
-        bpmDisplay.innerHTML = `${bpm} <span class="bpm-label">BPM</span>`;
+        updateBpmDisplay(bpm);
         
         if (interval) {
             clearInterval(interval);
             startMetronome(bpm);
+        }
+    });
+
+    // Update interval display when slider changes
+    intervalInput.addEventListener('input', (e) => {
+        const target = e.target as HTMLInputElement;
+        const ms = parseInt(target.value);
+        const safeMs = updateIntervalDisplay(ms);
+        
+        if (interval) {
+            clearInterval(interval);
+            startMetronome(msToBpm(safeMs));
         }
     });
 
@@ -101,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Audio feedback
-        const audio = new Audio('/sounds/message-pop.mp3');
+        const audio = new Audio('/sounds/cooking-bell.wav');
         audio.play().catch(error => {
             console.error('Error playing sound:', error);
         });
@@ -116,6 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialize display
-    bpmInput.dispatchEvent(new Event('input'));
+    // Initialize displays
+    const initialBpm = parseInt(bpmInput.value);
+    updateBpmDisplay(initialBpm);
+    updateIntervalDisplay(bpmToMs(initialBpm));
 });
