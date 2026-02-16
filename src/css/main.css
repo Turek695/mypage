@@ -1,5 +1,5 @@
 @import url('./reset.css');
-@import url('./variables.css');
+@import url('./common.css');
 
 a {
     text-decoration: none;
@@ -41,26 +41,6 @@ a {
     display: flex;
 }
 
-.footer {
-    color: var(--color-dark);
-    background-color: var(--color-light);
-    text-align: center;
-    padding: 1.5rem 1rem;
-    font-size: 0.9em;
-    word-wrap: normal;
-    margin-top: auto;
-}
-
-.footer a {
-    color: var(--primary, #4a6fa5);
-    text-decoration: none;
-    transition: opacity 0.2s;
-}
-
-.footer a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
-}
 
 .gallery { 
     max-width: 100%;
@@ -155,7 +135,7 @@ li {
 }
 
 .main {
-    padding-top: 2.5em;
+    padding-block: 2.5em;
 }
 
 .nav {

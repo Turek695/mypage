@@ -1,9 +1,7 @@
 :root {
-  /* Main theme colors */
   --color-light: rgb(223, 224, 230);
   --color-dark: rgb(16, 33, 55);
   
-  /* Metronome theme colors */
   --primary: #4a6fa5;
   --primary-hover: #3a5a8c;
   --text: #333;
@@ -22,4 +20,29 @@
   --bg: #1a1a2e;
   --card-bg: #16213e;
   --border: #2a3a5c;
+}
+
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9em;
+    word-wrap: normal;
+    margin-top: auto;
+}
+
+.footer a {
+    color: var(--primary, #4a6fa5);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 0;
 }
