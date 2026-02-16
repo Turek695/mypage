@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Metronome body (trapezoid - narrower at top, wider at bottom) -->
+  <path d="M 202 140 L 310 140 L 372 380 L 140 380 Z" fill="#4a6fa5"/>
+  
+  <!-- Metronome base -->
+  <rect x="120" y="380" width="272" height="30" rx="5" fill="#3a5a8c"/>
+  
+  <!-- Pendulum arm -->
+  <line x1="256" y1="160" x2="256" y2="360" stroke="white" stroke-width="6"/>
+  
+  <!-- Pendulum weight -->
+  <circle cx="256" cy="340" r="12" fill="white"/>
+  
+  <line x1="192" y1="180" x2="207" y2="180" stroke="white" stroke-width="3"/>
+  <line x1="182" y1="220" x2="197" y2="220" stroke="white" stroke-width="3"/>
+  <line x1="171" y1="260" x2="186" y2="260" stroke="white" stroke-width="3"/>
+  <line x1="161" y1="300" x2="176" y2="300" stroke="white" stroke-width="3"/>
+  <line x1="151" y1="340" x2="166" y2="340" stroke="white" stroke-width="3"/>
+  
+  <!-- Top pivot point -->
+  <circle cx="256" cy="160" r="8" fill="white"/>
+</svg>
