@@ -7,7 +7,6 @@
   "devDependencies": {
     "@types/bun": "latest",
     "@types/node": "^22.15.2",
-    "archiver": "^7.0.1",
     "vite": "^6.3.3"
   },
   "name": "mypage",
